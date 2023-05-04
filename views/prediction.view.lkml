@@ -1,8 +1,8 @@
 view: prediction {
-  parameter: Credit_Limit {type: number}
+  parameter: Credit_Limit{type: number}
   parameter: Total_Transaction_Amount{type: number}
-  parameter: Total_Transaction_Count {type: number}
-  parameter: Customer_Age {type: number}
+  parameter: Total_Transaction_Count{type: number}
+  parameter: Customer_Age{type: number}
 
   derived_table: {
     sql:
