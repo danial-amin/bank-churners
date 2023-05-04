@@ -1,16 +1,16 @@
 view: prediction {
   parameter: Credit_Limit{type: number}
-  parameter: Total_Transaction_Amount{type: number}
-  parameter: Total_Transaction_Count{type: number}
   parameter: Customer_Age{type: number}
+  parameter: Total_Transaction_Count{type: number}
+  parameter: Total_Transaction_Amount{type: number}
 
   derived_table: {
     sql:
     SELECT * FROM ML.PREDICT(MODEL `bank-churners-385705.churn.RFmodel`,
     (SELECT {% parameter Credit_Limit %} AS Credit_Limit,
-        {% parameter Total_Transaction_Amount %} AS Total_Trans_Amt,
-        {% parameter Customer_Age %} AS Customer_Age,
-        {% parameter Total_Transaction_Count %} AS Total_Trans_Ct));;
+            {% parameter Customer_Age %} AS Customer_Age,
+            {% parameter Total_Transaction_Count %} AS Total_Trans_Ct,
+            {% parameter Total_Transaction_Amount %} AS Total_Trans_Amt));;
   }
   dimension: predict_prob {
     type: number
