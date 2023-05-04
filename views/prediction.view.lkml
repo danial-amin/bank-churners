@@ -14,12 +14,12 @@ view: prediction {
   }
   dimension: predict_prob {
     type: number
-    sql: ${TABLE}.predicted_class_probs[1][1] ;;
+    sql: ${TABLE}.predicted_Attrition_Flag_probs[1][1] ;;
   }
 
   dimension: other_prob {
     type: number
-    sql: ${TABLE}.predicted_class_probs[0][1] ;;
+    sql: ${TABLE}.predicted_Attrition_Flag_probs[0][1] ;;
   }
 
   dimension: credit_limit {
