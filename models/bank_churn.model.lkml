@@ -13,3 +13,5 @@ persist_with: bank_churn_default_datagroup
 explore: bank_churn {}
 
 explore: feature_engineering {}
+
+explore: feature_engineering_full {}
