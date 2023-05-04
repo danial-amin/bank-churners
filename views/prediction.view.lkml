@@ -8,7 +8,7 @@ view: prediction {
     sql:
     SELECT * FROM ML.PREDICT(MODEL `bank-churners-385705.churn.RFmodel`,
     (SELECT {% parameter Credit_Limit %} AS Credit_Limit,
-        {% parameter Total_Transaction_Amount %} AS Total_Trans_Amt
+        {% parameter Total_Transaction_Amount %} AS Total_Trans_Amt,
         {% parameter Customer_Age %} AS Customer_Age,
         {% parameter Total_Transaction_Count %} AS Total_Trans_Ct));;
   }
