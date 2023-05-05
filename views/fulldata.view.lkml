@@ -108,6 +108,14 @@ view: fulldata {
     type: number
     sql: ${TABLE}.Avg_Utilization_Ratio ;;
   }
+  measure: sum_attrition {
+    type: sum
+    sql: ${TABLE}.Attrition_Flag ;;
+  }
+  measure: ratio {
+    type: number
+    sql: ${sum_attrition}/${count} ;;
+  }
 
   set: detail {
     fields: [
