@@ -30,7 +30,7 @@ view: prediction {
     type: number
     sql: ${TABLE}.Total_Trans_Amt ;;
   }
-  dimension: total_trans_ct {
+  dimension: totaltransct {
     type: number
     sql: ${TABLE}.Total_Trans_Ct ;;
   }
