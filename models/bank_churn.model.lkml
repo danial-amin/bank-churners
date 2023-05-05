@@ -17,3 +17,5 @@ explore: feature_engineering {}
 explore: feature_engineering_full {}
 
 explore: prediction {}
+
+explore: fulldata {}
